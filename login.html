@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Login | CosmicPath</title>
+  <meta name="description" content="Login to CosmicPath to access your personalized astrology dashboard, kundali insights, and horoscope assistant.">
+  <meta name="keywords" content="login, astrology dashboard, kundali, horoscope, CosmicPath">
+  <meta name="author" content="CosmicPath">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.png" type="image/png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://cosmicpath.com/login.html">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="CosmicPath">
+  <meta property="og:title" content="Login | CosmicPath">
+  <meta property="og:description" content="Access your personalized astrology dashboard, kundali insights, and horoscope assistant.">
+  <meta property="og:url" content="https://cosmicpath.com/login.html">
+  <meta property="og:image" content="https://cosmicpath.com/preview.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:title" content="Login | CosmicPath">
+  <meta name="twitter:description" content="Access your personalized astrology dashboard, kundali insights, and horoscope assistant.">
+  <meta name="twitter:image" content="https://cosmicpath.com/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS -->
+  <script defer src="script.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CosmicPath",
+    "url": "https://cosmicpath.com/",
+    "logo": "https://cosmicpath.com/logo.png",
+    "sameAs": [
+      "https://facebook.com/yourpage",
+      "https://instagram.com/yourpage",
+      "https://twitter.com/yourpage"
+    ]
+  }
+  </script>
+</head>
+<body class="cosmic">
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">
+        <div class="logo-mark">✦</div>
+        <div>
+          <div class="brand">CosmicPath</div>
+          <small class="tag">Discover Your Cosmic Path</small>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn outline" href="signup.html">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Login Form -->
+  <main class="auth-page container fade-in-up">
+    <div class="auth-card">
+      <h2>Login</h2>
+      <form id="loginForm" novalidate>
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" type="email" required placeholder="you@example.com">
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" type="password" required placeholder="••••••">
+        <div class="form-actions">
+          <button type="submit" class="btn big">Login</button>
+          <a href="signup.html" class="link">Create an account</a>
+        </div>
+        <p id="loginError" class="error" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>Contact</h4>
+        <p>hello@cosmicpath.example</p>
+      </div>
+      <div class="socials">
+        <a aria-label="Twitter">🐦</a>
+        <a aria-label="Instagram">📸</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year2"></span> CosmicPath</div>
+  </footer>
+</body>
+</html>

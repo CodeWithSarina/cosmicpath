@@ -1,0 +1,146 @@
+/* style.css - Cosmic / galaxy theme */
+:root{
+  --bg-1: #10002B;
+  --bg-2: #240046;
+  --accent: #6a00ff;
+  --muted: #cfc7ff;
+  --glass: rgba(255,255,255,0.04);
+  --glass-2: rgba(255,255,255,0.02);
+  --radius: 16px;
+  --container: 1100px;
+  --fw-sans: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body.cosmic{
+  margin:0;
+  font-family:var(--fw-sans);
+  color:var(--muted);
+  background: radial-gradient(1200px 600px at 10% 20%, rgba(138,43,226,0.12), transparent 5%),
+              radial-gradient(900px 500px at 90% 80%, rgba(58,12,170,0.08), transparent 10%),
+              linear-gradient(180deg,var(--bg-1) 0%, var(--bg-2) 60%, #3C096C 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height:100vh;
+}
+
+/* subtle stars */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image: radial-gradient(circle at 20% 10%, rgba(255,255,255,0.06) 0.5px, transparent 0.7px),
+                    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.04) 0.6px, transparent 0.8px);
+  background-size: 6px 6px, 10px 10px;
+  pointer-events:none;
+  opacity:0.5;
+  mix-blend-mode:screen;
+  z-index:0;
+}
+
+/* container */
+.container{max-width:var(--container);margin:0 auto;padding:24px;position:relative;z-index:2}
+
+/* navbar */
+.nav{padding:18px 0;position:sticky;top:0;backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.03);z-index:5}
+.nav-inner{display:flex;gap:24px;align-items:center;justify-content:space-between}
+.logo{display:flex;gap:12px;align-items:center;color:var(--muted);text-decoration:none}
+.logo-mark{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3C096C);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 6px 24px rgba(106,0,255,0.14)}
+.brand{font-weight:700;font-size:18px}
+.tag{font-size:11px;color:rgba(255,255,255,0.6);display:block;margin-top:-2px}
+
+.nav-links{display:flex;gap:10px;align-items:center}
+.btn{background:linear-gradient(90deg,var(--accent),#3C096C);border:none;color:white;padding:8px 14px;border-radius:10px;text-decoration:none;cursor:pointer;font-weight:600}
+.btn.mini{padding:6px 10px;font-size:13px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.btn.outline{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--muted)}
+.btn.big{padding:12px 20px;font-size:16px;border-radius:14px}
+.btn:active{transform:translateY(1px)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 520px;gap:36px;align-items:center;padding-top:36px;padding-bottom:36px}
+.headline{font-size:36px;margin:0 0 12px 0;color:#fff}
+.lead{color:rgba(255,255,255,0.85);max-width:46ch}
+.hero-ctas{display:flex;gap:12px;margin-top:18px}
+.hero-right{display:flex;align-items:center;justify-content:center}
+.wheel-card{width:100%;max-width:420px;border-radius:18px;padding:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 20px 50px rgba(12,8,30,0.5);border:1px solid rgba(255,255,255,0.03)}
+
+/* cards */
+.how-it-works{margin-top:22px}
+.how-it-works h3{margin-bottom:12px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:var(--glass);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(6px)}
+.card-img{font-size:28px;margin-bottom:8px}
+
+/* zodiac grid */
+.zodiac{margin-top:8px;padding-bottom:24px}
+.zodiac-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:14px}
+.sign{background:var(--glass-2);padding:12px;border-radius:10px;text-align:center;border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+/* Auth & profile */
+.auth-page{display:flex;align-items:center;justify-content:center;min-height:64vh;padding:36px 0}
+.auth-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:22px;border-radius:14px;min-width:320px;max-width:420px;border:1px solid rgba(255,255,255,0.03)}
+.auth-card h2{margin-top:0}
+label{display:block;font-size:13px;margin-top:12px;color:rgba(255,255,255,0.8)}
+input[type="text"],input[type="email"],input[type="password"],input[type="date"]{
+  width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(0,0,0,0.18);color:var(--muted)
+}
+.form-actions{display:flex;align-items:center;gap:12px;margin-top:14px;justify-content:space-between}
+.error{color:#ff7b7b;margin-top:8px}
+
+/* profile layout */
+.profile-page{padding-top:32px}
+.profile-card{display:flex;gap:28px;align-items:flex-start}
+.profile-left{width:320px;background:var(--glass);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+.avatar{width:120px;height:120px;border-radius:16px;display:block;object-fit:cover;background:linear-gradient(90deg,var(--accent),#3C096C);box-shadow:0 14px 40px rgba(0,0,0,0.4);margin-bottom:12px}
+.info-block{background:var(--glass-2);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);margin-bottom:12px}
+.sun-sign{font-size:22px;font-weight:700;color:#fff;padding:10px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+
+/* chatbot */
+.chat-page{display:flex;align-items:center;justify-content:center;padding:28px 0}
+.chat-ui{width:100%;max-width:860px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:14px;padding:12px;border:1px solid rgba(255,255,255,0.03)}
+.chat-header{display:flex;align-items:center;justify-content:space-between;padding:10px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.chat-window{min-height:360px;max-height:520px;overflow:auto;padding:18px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:72%;padding:10px 14px;border-radius:12px;background:rgba(255,255,255,0.03);align-self:flex-start}
+.msg.user{background:linear-gradient(90deg,#fff0ef,rgba(255,255,255,0.02));align-self:flex-end}
+.msg .meta{font-size:12px;opacity:0.7;margin-bottom:6px}
+.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(255,255,255,0.02)}
+.chat-input input{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(2,2,6,0.6);display:none;align-items:center;justify-content:center;z-index:10}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;width:90%;max-width:420px;border:1px solid rgba(255,255,255,0.03)}
+
+/* footer */
+.site-footer{padding:22px 0;margin-top:40px;opacity:0.95;border-top:1px solid rgba(255,255,255,0.02)}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.socials a{margin-left:8px;cursor:pointer}
+
+/* placeholder chart */
+.chart-placeholder{height:220px;border-radius:12px;display:flex;align-items:center;justify-content:center;border:1px dashed rgba(255,255,255,0.04);color:rgba(255,255,255,0.6)}
+
+/* animations */
+.fade-in{animation:fadeIn .9s ease both}
+.fade-in-up{animation:fadeInUp .9s ease both}
+.fade-up{animation:slideUp .9s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes slideUp{from{opacity:0;transform:translateY(40px) scale(.98)}to{opacity:1;transform:none}}
+
+/* responsive */
+@media (max-width:1000px){
+  .hero{grid-template-columns:1fr;gap:20px}
+  .zodiac-grid{grid-template-columns:repeat(4,1fr)}
+  .profile-card{flex-direction:column}
+  .nav-links{display:flex;gap:8px}
+}
+@media (max-width:640px){
+  .zodiac-grid{grid-template-columns:repeat(3,1fr)}
+  .cards{grid-template-columns:1fr}
+  .nav-inner{padding:4px 0}
+  .headline{font-size:28px}
+  .logo-mark{width:40px;height:40px}
+}

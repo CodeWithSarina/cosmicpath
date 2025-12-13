@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Create Account | CosmicPath</title>
+  <meta name="description" content="Create your CosmicPath account to unlock personalized horoscopes, zodiac insights, and birth chart readings.">
+  <meta name="keywords" content="signup, create account, astrology dashboard, kundali, horoscope, CosmicPath">
+  <meta name="author" content="CosmicPath">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.png" type="image/png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://cosmicpath.com/signup.html">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="CosmicPath">
+  <meta property="og:title" content="Create Account | CosmicPath">
+  <meta property="og:description" content="Create your CosmicPath account to access personalized horoscopes, zodiac insights, and kundali readings.">
+  <meta property="og:url" content="https://cosmicpath.com/signup.html">
+  <meta property="og:image" content="https://cosmicpath.com/preview.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:title" content="Create Account | CosmicPath">
+  <meta name="twitter:description" content="Sign up to CosmicPath to access personalized horoscopes, zodiac insights, and kundali readings.">
+  <meta name="twitter:image" content="https://cosmicpath.com/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS -->
+  <script defer src="script.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CosmicPath",
+    "url": "https://cosmicpath.com/",
+    "logo": "https://cosmicpath.com/logo.png",
+    "sameAs": [
+      "https://facebook.com/yourpage",
+      "https://instagram.com/yourpage",
+      "https://twitter.com/yourpage"
+    ]
+  }
+  </script>
+</head>
+<body class="cosmic">
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">
+        <div class="logo-mark">✦</div>
+        <div>
+          <div class="brand">CosmicPath</div>
+          <small class="tag">Discover Your Cosmic Path</small>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn" href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Signup Form -->
+  <main class="auth-page container fade-in-up">
+    <div class="auth-card">
+      <h2>Create Account</h2>
+      <form id="signupForm" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" type="text" required placeholder="Your name">
+        <label for="email">Email</label>
+        <input id="email" type="email" required placeholder="you@example.com">
+        <label for="dob">Date of Birth</label>
+        <input id="dob" type="date" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" minlength="6" required placeholder="At least 6 characters">
+        <div class="form-actions">
+          <button type="submit" class="btn big">Signup</button>
+        </div>
+        <p id="signupError" class="error" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>Contact</h4>
+        <p>hello@cosmicpath.example</p>
+      </div>
+      <div class="socials">
+        <a aria-label="Twitter">🐦</a>
+        <a aria-label="Instagram">📸</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year3"></span> CosmicPath</div>
+  </footer>
+</body>
+</html>
