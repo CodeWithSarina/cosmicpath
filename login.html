@@ -4,89 +4,112 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Login | CosmicPath</title>
-  <meta name="description" content="Login to CosmicPath to access your personalized astrology dashboard, kundali insights, and horoscope assistant.">
-  <meta name="keywords" content="login, astrology dashboard, kundali, horoscope, CosmicPath">
+  <!-- Title & Meta -->
+  <title>Astrology Chatbot – AI Horoscope & Kundali Assistant | CosmicPath</title>
+  <meta name="description" content="Chat with our AI astrology assistant for instant horoscope answers, kundali readings, zodiac insights, and astrology explanations.">
   <meta name="author" content="CosmicPath">
   <meta name="robots" content="index, follow">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.png" type="image/png">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://cosmicpath.com/login.html">
+  <!-- Canonical (MATCHES GITHUB PAGES DOMAIN) -->
+  <link rel="canonical" href="https://codewithsarina.github.io/cosmicpath/chatbot.html">
 
   <!-- Open Graph -->
   <meta property="og:site_name" content="CosmicPath">
-  <meta property="og:title" content="Login | CosmicPath">
-  <meta property="og:description" content="Access your personalized astrology dashboard, kundali insights, and horoscope assistant.">
-  <meta property="og:url" content="https://cosmicpath.com/login.html">
-  <meta property="og:image" content="https://cosmicpath.com/preview.jpg">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="Astrology Chatbot – AI Horoscope & Kundali Assistant">
+  <meta property="og:description" content="Chat with an AI astrology assistant for horoscopes, kundali insights, and zodiac guidance.">
+  <meta property="og:url" content="https://codewithsarina.github.io/cosmicpath/chatbot.html">
+  <meta property="og:image" content="https://codewithsarina.github.io/cosmicpath/preview.jpg">
 
   <!-- Twitter Card -->
-  <meta name="twitter:title" content="Login | CosmicPath">
-  <meta name="twitter:description" content="Access your personalized astrology dashboard, kundali insights, and horoscope assistant.">
-  <meta name="twitter:image" content="https://cosmicpath.com/preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Astrology Chatbot – AI Horoscope & Kundali Assistant">
+  <meta name="twitter:description" content="Ask astrology questions and get instant horoscope and kundali answers.">
+  <meta name="twitter:image" content="https://codewithsarina.github.io/cosmicpath/preview.jpg">
 
   <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <!-- JS -->
   <script defer src="script.js"></script>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- Structured Data (CORRECT TYPE) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "CosmicPath",
-    "url": "https://cosmicpath.com/",
-    "logo": "https://cosmicpath.com/logo.png",
-    "sameAs": [
-      "https://facebook.com/yourpage",
-      "https://instagram.com/yourpage",
-      "https://twitter.com/yourpage"
-    ]
+    "@type": "WebPage",
+    "name": "Astrology Chatbot",
+    "url": "https://codewithsarina.github.io/cosmicpath/chatbot.html",
+    "description": "AI-powered astrology chatbot for horoscope answers, kundali readings, and zodiac insights.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CosmicPath",
+      "url": "https://codewithsarina.github.io/cosmicpath/"
+    }
   }
   </script>
 </head>
+
 <body class="cosmic">
-  <!-- Navbar -->
+
+  <!-- Header / Navbar -->
   <header class="nav">
     <div class="container nav-inner">
       <a class="logo" href="index.html">
-        <div class="logo-mark">✦</div>
-        <div>
-          <div class="brand">CosmicPath</div>
-          <small class="tag">Discover Your Cosmic Path</small>
-        </div>
+        <div class="logo-mark" aria-hidden="true">✦</div>
+        <div class="brand">CosmicPath</div>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a class="btn" href="index.html">Home</a>
-        <a class="btn outline" href="signup.html">Signup</a>
+        <a class="btn" href="profile.html">Profile</a>
       </nav>
     </div>
   </header>
 
-  <!-- Login Form -->
-  <main class="auth-page container fade-in-up">
-    <div class="auth-card">
-      <h2>Login</h2>
-      <form id="loginForm" novalidate>
-        <label for="loginEmail">Email</label>
-        <input id="loginEmail" type="email" required placeholder="you@example.com">
-        <label for="loginPassword">Password</label>
-        <input id="loginPassword" type="password" required placeholder="••••••">
-        <div class="form-actions">
-          <button type="submit" class="btn big">Login</button>
-          <a href="signup.html" class="link">Create an account</a>
+  <!-- Main Content -->
+  <main class="container chat-page fade-in-up">
+
+    <!-- SEO H1 -->
+    <h1>Astrology Chatbot – AI Horoscope & Kundali Assistant</h1>
+
+    <!-- Supporting SEO Text -->
+    <p>
+      This AI astrology chatbot helps you explore zodiac personalities, daily horoscopes,
+      and kundali insights. Ask questions freely or visit your
+      <a href="profile.html">kundali profile</a> to save readings.
+    </p>
+
+    <!-- Chatbot UI -->
+    <section class="chat-ui" aria-label="Astrology chatbot interface">
+      <div class="chat-header">
+        <div>
+          <strong>Astrology Assistant</strong>
+          <small>Ask about zodiac signs, horoscopes, or kundali readings</small>
         </div>
-        <p id="loginError" class="error" aria-live="polite"></p>
+        <div class="bot-avatar" aria-hidden="true">✦</div>
+      </div>
+
+      <div id="chatWindow" class="chat-window" aria-live="polite"></div>
+
+      <form id="chatForm" class="chat-input">
+        <label for="chatInput" class="sr-only">Ask astrology question</label>
+        <input
+          id="chatInput"
+          type="text"
+          placeholder="Ask something like: What is Aries personality?"
+          autocomplete="off"
+          required
+        />
+        <button class="btn" type="submit">Send</button>
       </form>
-    </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -94,14 +117,21 @@
     <div class="container footer-inner">
       <div>
         <h4>Contact</h4>
-        <p>hello@cosmicpath.example</p>
+        <p>Email: <a href="mailto:hello@cosmicpath.example">hello@cosmicpath.example</a></p>
       </div>
       <div class="socials">
-        <a aria-label="Twitter">🐦</a>
-        <a aria-label="Instagram">📸</a>
+        <a href="https://twitter.com/cosmicpath" aria-label="Twitter">🐦</a>
+        <a href="https://instagram.com/cosmicpath" aria-label="Instagram">📸</a>
       </div>
     </div>
-    <div class="copyright">© <span id="year2"></span> CosmicPath</div>
+    <div class="copyright">
+      © <span id="year"></span> CosmicPath
+    </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>

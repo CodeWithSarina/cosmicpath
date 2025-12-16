@@ -4,66 +4,68 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>My Astrology Profile | CosmicPath</title>
-  <meta name="description" content="View your saved kundali profile, birth chart details, zodiac traits, and personalized horoscope dashboard.">
-  <meta name="keywords" content="astrology profile, kundali, birth chart, horoscope, zodiac traits, CosmicPath">
+  <!-- Title & Meta -->
+  <title>My Astrology Profile – Kundali & Birth Chart | CosmicPath</title>
+  <meta name="description" content="View and manage your astrology profile, kundali details, birth chart insights, sun sign, and personalized horoscope dashboard.">
   <meta name="author" content="CosmicPath">
   <meta name="robots" content="index, follow">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.png" type="image/png">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://cosmicpath.com/profile.html">
+  <!-- Canonical (MATCHES GITHUB PAGES DOMAIN) -->
+  <link rel="canonical" href="https://codewithsarina.github.io/cosmicpath/profile.html">
 
   <!-- Open Graph -->
   <meta property="og:site_name" content="CosmicPath">
-  <meta property="og:title" content="My Astrology Profile | CosmicPath">
-  <meta property="og:description" content="Access your personalized astrology dashboard, view your kundali profile, birth chart, and zodiac insights.">
-  <meta property="og:url" content="https://cosmicpath.com/profile.html">
-  <meta property="og:image" content="https://cosmicpath.com/preview.jpg">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="My Astrology Profile – Kundali & Birth Chart">
+  <meta property="og:description" content="Access your personalized astrology profile including kundali, birth chart, sun sign, and horoscope insights.">
+  <meta property="og:url" content="https://codewithsarina.github.io/cosmicpath/profile.html">
+  <meta property="og:image" content="https://codewithsarina.github.io/cosmicpath/preview.jpg">
 
   <!-- Twitter Card -->
-  <meta name="twitter:title" content="My Astrology Profile | CosmicPath">
-  <meta name="twitter:description" content="Access your personalized astrology dashboard, view your kundali profile, birth chart, and zodiac insights.">
-  <meta name="twitter:image" content="https://cosmicpath.com/preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="My Astrology Profile – Kundali & Birth Chart">
+  <meta name="twitter:description" content="Manage your kundali profile, zodiac traits, and astrology dashboard.">
+  <meta name="twitter:image" content="https://codewithsarina.github.io/cosmicpath/preview.jpg">
 
   <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <!-- JS -->
   <script defer src="script.js"></script>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- Structured Data (CORRECT TYPE FOR THIS PAGE) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "CosmicPath",
-    "url": "https://cosmicpath.com/",
-    "logo": "https://cosmicpath.com/logo.png",
-    "sameAs": [
-      "https://facebook.com/yourpage",
-      "https://instagram.com/yourpage",
-      "https://twitter.com/yourpage"
-    ]
+    "@type": "WebPage",
+    "name": "My Astrology Profile",
+    "url": "https://codewithsarina.github.io/cosmicpath/profile.html",
+    "description": "Personal astrology profile dashboard with kundali details, birth chart, and zodiac insights.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CosmicPath",
+      "url": "https://codewithsarina.github.io/cosmicpath/"
+    }
   }
   </script>
 </head>
+
 <body class="cosmic">
-  <!-- Navbar -->
+
+  <!-- Header / Navbar -->
   <header class="nav">
     <div class="container nav-inner">
       <a class="logo" href="index.html">
-        <div class="logo-mark">✦</div>
-        <div>
-          <div class="brand">CosmicPath</div>
-        </div>
+        <div class="logo-mark" aria-hidden="true">✦</div>
+        <div class="brand">CosmicPath</div>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a class="btn" href="index.html">Home</a>
         <a class="btn" href="chatbot.html">Chatbot</a>
         <button class="btn outline" id="logoutBtn">Logout</button>
@@ -71,14 +73,32 @@
     </div>
   </header>
 
-  <!-- Profile Page -->
+  <!-- Main Content -->
   <main class="container profile-page fade-in-up">
-    <section class="profile-card">
+
+    <!-- SEO H1 -->
+    <h1>My Astrology Profile</h1>
+
+    <!-- Supporting SEO Text -->
+    <p>
+      This dashboard displays your saved kundali profile, birth chart details,
+      sun sign, and astrology insights. You can edit your information or chat with
+      the <a href="chatbot.html">AI astrology assistant</a> anytime.
+    </p>
+
+    <!-- Profile Card -->
+    <section class="profile-card" aria-label="User astrology profile">
       <div class="profile-left">
-        <img id="profilePic" class="avatar" alt="Profile placeholder" src="" />
+        <img
+          id="profilePic"
+          class="avatar"
+          src=""
+          alt="User profile avatar placeholder"
+        />
         <h2 id="profileName">—</h2>
         <p id="profileEmail">—</p>
         <p id="profileDOB">—</p>
+
         <button id="editProfileBtn" class="btn outline">Edit Profile</button>
         <button id="logoutBtn2" class="btn">Logout</button>
       </div>
@@ -91,25 +111,30 @@
 
         <div class="info-block">
           <h3>Birth Chart</h3>
-          <div class="chart-placeholder">
-            <div class="chart-note">Birth chart visualization placeholder</div>
+          <div class="chart-placeholder" aria-hidden="true">
+            <div class="chart-note">
+              Birth chart visualization placeholder
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Edit Modal -->
+  <!-- Edit Profile Modal -->
   <div id="editModal" class="modal" aria-hidden="true">
     <div class="modal-content">
       <h3>Edit Profile</h3>
       <form id="editForm">
         <label for="editName">Name</label>
         <input id="editName" required>
+
         <label for="editEmail">Email</label>
         <input id="editEmail" type="email" required>
-        <label for="editDob">DOB</label>
+
+        <label for="editDob">Date of Birth</label>
         <input id="editDob" type="date" required>
+
         <div class="form-actions">
           <button type="submit" class="btn">Save</button>
           <button type="button" id="cancelEdit" class="btn outline">Cancel</button>
@@ -123,14 +148,21 @@
     <div class="container footer-inner">
       <div>
         <h4>Contact</h4>
-        <p>hello@cosmicpath.example</p>
+        <p>Email: <a href="mailto:hello@cosmicpath.example">hello@cosmicpath.example</a></p>
       </div>
       <div class="socials">
-        <a aria-label="Twitter">🐦</a>
-        <a aria-label="Instagram">📸</a>
+        <a href="https://twitter.com/cosmicpath" aria-label="Twitter">🐦</a>
+        <a href="https://instagram.com/cosmicpath" aria-label="Instagram">📸</a>
       </div>
     </div>
-    <div class="copyright">© <span id="year4"></span> CosmicPath</div>
+    <div class="copyright">
+      © <span id="year"></span> CosmicPath
+    </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>

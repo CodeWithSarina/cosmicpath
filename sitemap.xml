@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://cosmicpath.com/</loc>
+    <loc>https://codewithsarina.github.io/cosmicpath/</loc>
     <priority>1.00</priority>
     <changefreq>daily</changefreq>
   </url>
 
   <url>
-    <loc>https://cosmicpath.com/login.html</loc>
+    <loc>https://codewithsarina.github.io/cosmicpath/login.html</loc>
     <priority>0.80</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://cosmicpath.com/signup.html</loc>
+    <loc>https://codewithsarina.github.io/cosmicpath/signup.html</loc>
     <priority>0.80</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://cosmicpath.com/chatbot.html</loc>
+    <loc>https://codewithsarina.github.io/cosmicpath/chatbot.html</loc>
     <priority>0.70</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://cosmicpath.com/profile.html</loc>
+    <loc>https://codewithsarina.github.io/cosmicpath/profile.html</loc>
     <priority>0.70</priority>
     <changefreq>weekly</changefreq>
   </url>
