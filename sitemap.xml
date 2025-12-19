@@ -3,37 +3,10 @@
 
   <url>
     <loc>https://codewithsarina.github.io/cosmicpath/</loc>
-    <lastmod>2025-12-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://codewithsarina.github.io/cosmicpath/login.html</loc>
-    <lastmod>2025-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://codewithsarina.github.io/cosmicpath/signup.html</loc>
-    <lastmod>2025-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://codewithsarina.github.io/cosmicpath/chatbot.html</loc>
-    <lastmod>2025-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://codewithsarina.github.io/cosmicpath/profile.html</loc>
-    <lastmod>2025-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
   </url>
 
 </urlset>
